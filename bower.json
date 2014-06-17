@@ -1,0 +1,24 @@
+{
+  "name": "ads-analysis-angular",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.2.0",
+    "json3": "~3.2.4",
+    "es5-shim": "~2.1.0",
+    "jquery": "~1.11.1",
+    "jquery-ui": "~1.10.4",
+    "jqueryui-timepicker-addon": "~1.4.5",
+    "angular-resource": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "requirejs": "~2.1.14",
+    "highcharts": "~3.0.7",
+    "gmap3": "~6.0.0",
+    "pace": "~0.5.1",
+    "requirejs-plugins": "~1.0.2",
+    "bootstrap": "~3.1.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0",
+    "angular-scenario": "~1.2.0"
+  }
+}
