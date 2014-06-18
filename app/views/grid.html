@@ -6,18 +6,28 @@
       Tips : Select item(s) and then click Chart / Map to see visualization.
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table grid-table">
         <thead>
           <tr>
             <th>Select</th>
             <th>ID</th>
             <th>Name</th>
-            <th ng-repeat="title in getCountableTitles(items[0])">{{ title }}</th>
+            <th>Read</th>
+            <th>Unread</th>
             <th>Rate</th>
             <th>Create Time</th>
           </tr>
         </thead>
         <tbody>
+          <tr ng-repeat="item in items">
+            <td><input type="checkbox"></input></td>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.readCount }}</td>
+            <td>{{ item.unreadCount }}</td>
+            <td>{{ getRate(item) }} %</td>
+            <td>{{ item.createdAt }}</td>
+          </tr>
         </tbody>
       </table>
     </div>

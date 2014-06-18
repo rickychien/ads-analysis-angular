@@ -7,20 +7,9 @@ define(['app', 'services/service'], function(app) {
         type: 'notifications'
       });
 
-      $scope.getCountableTitles = function(items) {
-        var titles = [],
-            index;
-
-        for (var key in items) {
-          if (items.hasOwnProperty(key) && key.indexOf('_count') > -1) {
-            key = key[0].toUpperCase() + key.slice(1);
-            index = key.indexOf('_');
-            key = key.substring(0, (index === -1) ? key.length : index);
-            titles.push(key);
-          }
-        }
-
-        return titles;
+      $scope.getRate = function(item) {
+        return (item.readCount / ((item.readCount + item.unreadCount) || 1) *
+          100).toFixed(2);
       };
     }
   ]);

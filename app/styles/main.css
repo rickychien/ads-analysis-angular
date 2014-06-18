@@ -175,7 +175,7 @@ body {
     display: block;
 }
 
-#grid-data td:first-child {
+.grid-table td:first-child {
     padding-left: 20px;
 }
 
