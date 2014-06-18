@@ -6,9 +6,19 @@
       Tips : Select item(s) and then click Chart / Map to see visualization.
     </div>
     <div class="table-responsive">
-      <table id="grid-data" class="table">
-        <thead></thead>
-        <tbody></tbody>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th ng-repeat="title in getCountableTitles(items[0])">{{ title }}</th>
+            <th>Rate</th>
+            <th>Create Time</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
       </table>
     </div>
   </div>

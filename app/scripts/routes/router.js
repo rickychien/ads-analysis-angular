@@ -1,28 +1,28 @@
 define([
   'app',
-  'controllers/app-controller'
+  'controllers/tabsController',
+  'controllers/chartController',
+  'controllers/gridController',
+  'controllers/mapController',
 ], function(app) {
   'use strict';
 
   app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-      when('/', {
-        redirectTo: '/grid'
-      }).
       when('/chart', {
         templateUrl: './views/chart.html',
-        controller: 'ChartCtrl'
+        controller: 'ChartController'
       }).
       when('/grid', {
         templateUrl: './views/grid.html',
-        controller: 'GridCtrl'
+        controller: 'GridController'
       }).
       when('/map', {
         templateUrl: './views/map.html',
-        controller: 'MapCtrl'
+        controller: 'MapController'
       }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: '/grid'
       });
   }]);
 

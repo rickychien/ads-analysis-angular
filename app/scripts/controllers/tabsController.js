@@ -1,19 +1,7 @@
 define(['app'], function(app) {
   'use strict';
 
-  app.controller('ChartCtrl', function() {
-
-  });
-
-  app.controller('GridCtrl', function() {
-
-  });
-
-  app.controller('MapCtrl', function() {
-
-  });
-
-  app.controller('TabsCtrl', function($scope) {
+  app.controller('TabsController', function($scope) {
     $scope.tabs = [
       { url: '#/chart', label: 'Chart' },
       { url: '#/grid', label: 'Grid' },

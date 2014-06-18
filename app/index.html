@@ -68,7 +68,7 @@
           </form>
         </div>
 
-        <div id="visualization" ng-controller="TabsCtrl">
+        <div id="visualization" ng-controller="TabsController">
           <ul class="nav nav-tabs nav-justified">
             <li ng-class="tabClass(tab)" ng-repeat="tab in tabs">
               <a href="{{ tab.url }}" ng-click="setSelectedTab(tab)">{{ tab.label }}</a>
