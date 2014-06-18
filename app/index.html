@@ -68,17 +68,16 @@
           </form>
         </div>
 
-        <div id="visualization">
-          <ul id="tabs" class="nav nav-tabs nav-justified">
-            <li><a id="chart-tab" href="#chart" data-toggle="tab">Chart</a></li>
-            <li class="active"><a id="grid-tab" href="#grid" data-toggle="tab">Grid</a></li>
-            <li><a id="map-tab" href="#map" data-toggle="tab">Map</a></li>
+        <div id="visualization" ng-controller="TabsCtrl">
+          <ul class="nav nav-tabs nav-justified">
+            <li ng-class="tabClass(tab)" ng-repeat="tab in tabs">
+              <a href="{{ tab.url }}" ng-click="setSelectedTab(tab)">{{ tab.label }}</a>
+            </li>
           </ul>
 
           <div class="well">
             <div class="progress-wrapper"></div>
-            <div id="content" class="tab-content" ng-view>
-            </div>
+            <div id="content" class="tab-content" ng-view></div>
           </div>
         </div>
       </div>

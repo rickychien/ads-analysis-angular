@@ -10,20 +10,20 @@ define([
         redirectTo: '/grid'
       }).
       when('/chart', {
-        templateUrl: './chart.html',
+        templateUrl: './views/chart.html',
         controller: 'ChartCtrl'
       }).
       when('/grid', {
-        templateUrl: './grid.html',
+        templateUrl: './views/grid.html',
         controller: 'GridCtrl'
       }).
       when('/map', {
-        templateUrl: './map.html',
+        templateUrl: './views/map.html',
         controller: 'MapCtrl'
       }).
       otherwise({
         redirectTo: '/'
-      });;
+      });
   }]);
 
 });
