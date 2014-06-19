@@ -4,9 +4,9 @@ define(['app'], function(app) {
   app.controller('TabsController', ['$scope', '$routeParams',
     function($scope, $routeParams) {
       $scope.tabs = [
-        { url: '#/chart' + $routeParams.type , label: 'Chart' },
-        { url: '#/grid'  , label: 'Grid' },
-        { url: '#/map'  , label: 'Map' }
+        { type: '#/chart/', label: 'Chart' },
+        { type: '#/grid/', label: 'Grid' },
+        { type: '#/map/', label: 'Map' }
       ];
 
       $scope.selectedTab = $scope.tabs[1];
@@ -15,12 +15,16 @@ define(['app'], function(app) {
         $scope.selectedTab = tab;
       };
 
-      $scope.tabClass = function(tab) {
+      $scope.getTabClass = function(tab) {
         if ($scope.selectedTab === tab) {
           return 'active';
         } else {
           return '';
         }
+      };
+
+      $scope.getTabUrl = function(tab) {
+        return tab.type + $routeParams.type;
       };
     }
   ]);

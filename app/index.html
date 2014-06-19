@@ -70,8 +70,8 @@
 
         <div id="visualization" ng-controller="TabsController">
           <ul class="nav nav-tabs nav-justified">
-            <li ng-class="tabClass(tab)" ng-repeat="tab in tabs">
-              <a href="{{ tab.url }}" ng-click="setSelectedTab(tab)">{{ tab.label }}</a>
+            <li ng-class="getTabClass(tab)" ng-repeat="tab in tabs">
+              <a href="{{ getTabUrl(tab) }}" ng-click="setSelectedTab(tab)">{{ tab.label }}</a>
             </li>
           </ul>
 
