@@ -1,10 +1,10 @@
 define(['app', 'services/service'], function(app) {
   'use strict';
 
-  app.controller('GridController', ['$scope', 'Service',
-    function($scope, Service) {
+  app.controller('GridController', ['$scope', '$routeParams', 'Service',
+    function($scope, $routeParams, Service) {
       $scope.items = Service.get({
-        type: 'notifications'
+        type: $routeParams.type
       });
 
       $scope.getRate = function(item) {

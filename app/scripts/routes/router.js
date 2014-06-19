@@ -9,20 +9,20 @@ define([
 
   app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-      when('/chart', {
+      when('/chart/:type', {
         templateUrl: './views/chart.html',
         controller: 'ChartController'
       }).
-      when('/grid', {
+      when('/grid/:type', {
         templateUrl: './views/grid.html',
         controller: 'GridController'
       }).
-      when('/map', {
+      when('/map/:type', {
         templateUrl: './views/map.html',
         controller: 'MapController'
       }).
       otherwise({
-        redirectTo: '/grid'
+        redirectTo: '/grid/notifications',
       });
   }]);
 
